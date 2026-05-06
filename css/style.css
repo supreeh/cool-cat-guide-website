@@ -11,7 +11,7 @@ body {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     background-color: rgba(180, 184, 127, 0.712);
 }
 
@@ -40,6 +40,14 @@ ul {
 li {
     margin-bottom: 10px;
     line-height: 25px;
+}
+.container {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 #button1 {
@@ -132,11 +140,61 @@ figcaption {
 .gallery figure {
     text-align: center;
 }
-.container {
-    max-width: 1050px;
-    margin: 40px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.50);
-    border-radius: 50px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.gallery-item:hover {
+    transform: scale(1.1)
+}
+.modal-content {
+    border-radius: 5%;
+    position: relative;
+    width: 50%;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+    animation: zoomIn 0.5s;
+}
+@keyframes zoomIn {
+    from {transform: scale(0.6);}
+    to {transform: scale(1);}
+}
+.modal {
+    display: none;
+}
+
+.modal.show {
+    display: flex;
+    position: fixed;
+    inset: 0; 
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color:hsl(180, 100%, 50%);
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.caption {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: hsl(180, 100%, 50%);
+    font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+@media screen and (max-width: 460px) {
+    .gallery-item {
+        width: calc(100% - 20px);
+    }
 }
