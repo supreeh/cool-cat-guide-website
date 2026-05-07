@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<script src="../js/site.js" defer></script>
+<title>Katzenbilder</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="../stuff/my_cat_circle_2.png">
+<meta charset="UTF-8" name="viewport" content="width-device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Hier sind einige coole Katzen zu sehen</h1>
+
+    </header>
+
+    <main>
+
+        <a href="index.html">
+            <button id="button1"> Startseite </button></a>
+        <a href="themen.html">
+            <button id="button2"> Themen </button></a>
+        <a href="katzen.html">
+            <button id="button3"> Katzenbilder </button></a>
+
+        <h6><marquee>Hier siehst du meine coole Katze.</marquee><h0>
+        <img id="img3" src="../stuff/my_cat_circle_3.png" alt="my cat, just my cat." style="width:20%" style=height:20%>
+        <img id="img2" src="../stuff/my_cat_circle_2.png" alt="my cat, just my cat." style="width:20%" style=height:20%>
+        <img id="img1" src="../stuff/my_cat_circle.png" alt="my cat, just my cat." style="width:20%" style=height:20%>
+    </main>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal('modal')">&times;</span>
+        <img id="modalImg" class="modal-content">
+        <div class="caption"></div>
+    </div>
     <div class="gallery">
         <figure>
             <img id="img4" src="../stuff/philipps_cat_1.jpeg" alt="philipps cat, just philipps cat." class="gallery-item" onclick="openModal('modal','philipps cat, just philipps cat.',this.src)">
