@@ -17,6 +17,7 @@ async function getDresdenWetter() {
         const temp = Math.round(data.current.temperature_2m);
         document.getElementById('dresden-temp').innerText = `${temp}°C`;
         const code = data.current.weather_code;
+        console.log(data)
         let wetterText = "Klar";
         if (code === 0) wetterText = "☀️ Sonnig";
         else if (code >= 1 && code <= 3) wetterText = "⛅ Leicht bewölkt";
