@@ -8,7 +8,7 @@ function openModal(modalId, caption, imgSrc, event) {
 function closeModal(modalId) {
   document.getElementById(modalId).classList.remove("show");
 }
-async function holeDresdenWetter() {
+async function getDresdenWetter() {
     const url = "https://api.open-meteo.com/v1/forecast?latitude=51.0504&longitude=13.7373&current=temperature_2m,weather_code&timezone=Europe%2FBerlin";
     
     try {
@@ -31,4 +31,4 @@ async function holeDresdenWetter() {
         document.getElementById('dresden-status').innerText = "Fehler beim Laden";
     }
 }
-holeDresdenWetter();
+getDresdenWetter();
