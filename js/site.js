@@ -23,7 +23,9 @@ async function getDresdenWetter() {
         else if (code >= 1 && code <= 2) wetterText = "⛅ leicht bewölkt";
         else if (code >= 3) wetterText = "☁️ Bewölkt";
         else if (code >= 45 && code <= 48) wetterText = "🌫️ Nebel";
-        else if (code >= 51 && code <= 67) wetterText = "🌧️ Regen";
+        else if (code >= 61) wetterText = "🌧️ leichter Regen";
+        else if (code >= 63) wetterText = "🌧️ Regen";
+        else if (code >= 65) wetterText = "🌧️ starker Regen";
         else if (code >= 71 && code <= 77) wetterText = "❄️ Schnee";
         else if (code >= 80 && code <= 82) wetterText = "🌦️ Regenschauer";
         else if (code >= 95) wetterText = "⛈️ Gewitter";
