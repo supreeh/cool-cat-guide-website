@@ -36,3 +36,8 @@ async function getDresdenWetter() {
     }
 }
 getDresdenWetter();
+
+var Ladescreen = document.querySelector(".Ladescreen");
+window.addEventListener('load', function() {
+  Ladescreen.style.display = 'none';
+})
