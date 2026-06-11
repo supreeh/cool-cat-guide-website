@@ -1,13 +1,8 @@
-function openModal(modalId, caption, imgSrc, event) {
-  const modal = document.getElementById(modalId);
-  const img = document.getElementById("modalImg");
-  img.src = imgSrc;
-  modal.querySelector(".caption").innerText = caption;
-  modal.classList.add("show");
-}
-function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove("show");
-}
+var Ladescreen = document.querySelector(".Ladescreen");
+window.addEventListener('load', function() {
+  Ladescreen.style.display = 'none';
+})
+
 async function getDresdenWetter() {
     const url = "https://api.open-meteo.com/v1/forecast?latitude=51.0504&longitude=13.7373&current=temperature_2m,weather_code&timezone=Europe%2FBerlin";
     
@@ -37,7 +32,13 @@ async function getDresdenWetter() {
 }
 getDresdenWetter();
 
-var Ladescreen = document.querySelector(".Ladescreen");
-window.addEventListener('load', function() {
-  Ladescreen.style.display = 'none';
-})
+function openModal(modalId, caption, imgSrc, event) {
+  const modal = document.getElementById(modalId);
+  const img = document.getElementById("modalImg");
+  img.src = imgSrc;
+  modal.querySelector(".caption").innerText = caption;
+  modal.classList.add("show");
+}
+function closeModal(modalId) {
+  document.getElementById(modalId).classList.remove("show");
+}
