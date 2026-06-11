@@ -217,15 +217,17 @@ figcaption {
 .game-container {
     width: 1200px;
     max-width: 790px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 5% auto;
+    padding: 2% 0.5%;
+    background-image: url("../stuff/rahmen.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
 }
 
 .game-container iframe {
     width: 100%;
     max-height: 592px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 20px;
 }
 .besucher-counter {
     position: fixed;
