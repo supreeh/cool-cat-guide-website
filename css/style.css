@@ -197,18 +197,20 @@ figcaption {
 }
 .wetter-box {
     background: rgba(255, 255, 255, 0.50);
-    padding: 2px;
-    margin: 40px auto;
+    margin: 10px 10px;
     border-radius: 50px;
     max-width: 225px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 10px;
+    left: 10px;
 }
 .temp {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 10px 0;
-    color: rgb(108, 110, 68);
+    margin: 0px 55px;
+    color: hsla(63, 24%, 35%, 1);
 }
 .status {
     color: rgba(0, 0, 0, 0.5);
