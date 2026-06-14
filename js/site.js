@@ -32,6 +32,31 @@ async function getDresdenWetter() {
 }
 getDresdenWetter();
 
+document.getElementById("tab1").addEventListener("change", function() {
+    setTimeout(() => {
+    window.location.href = "index.html";
+    },300);
+});
+
+document.getElementById("tab2").addEventListener("change", function() {
+    setTimeout(() => {
+    window.location.href = "themen.html";
+    },300);
+});
+
+document.getElementById("tab3").addEventListener("change", function() {
+    setTimeout(() => {
+    window.location.href = "katzen.html";
+    },300);
+});
+
+document.getElementById("tab4").addEventListener("change", function() {
+    setTimeout(() => {
+    window.location.href = "isaac.html";
+    },300);
+});
+
+
 function openModal(modalId, caption, imgSrc, event) {
   const modal = document.getElementById(modalId);
   const img = document.getElementById("modalImg");

@@ -14,21 +14,26 @@
 <body>
 
     <header>
-
-        <h1>Hier findest du alle Themen</h1>
-
     </header>
 
     <main>
 
-        <a href="index.html">
-            <button id="button1"> Startseite </button></a>
-        <a href="themen.html">
-            <button id="button2"> Themen </button></a>
-        <a href="katzen.html">
-            <button id="button3"> Katzenbilder </button></a>
-        <a href="isaac.html">
-            <button id="button4"> Isaac </button></a>
+<div class="tab-container">
+
+  <input type="radio" name="tab" id="tab1" class="tab tab--1" />  
+  <label class="tab_label" for="tab1">Startseite</label>
+    
+  <input type="radio" name="tab" id="tab2" class="tab tab--2" checked/>
+  <label class="tab_label" for="tab2">Themen</label>
+
+  <input type="radio" name="tab" id="tab3" class="tab tab--3" />
+  <label class="tab_label" for="tab3">Galerie</label>
+  
+  <input type="radio" name="tab" id="tab4" class="tab tab--4" />
+  <label class="tab_label" for="tab4">Isaac</label>
+
+  <div class="indicator"></div>
+</div>
 
         <h6><marquee>Hier siehst du meine coole Katze.</marquee><h0>
         <img id="img3" src="../stuff/my_cat_circle_3.png" alt="my cat, just my cat." style="width:20%" style=height:20%>

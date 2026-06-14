@@ -8,6 +8,9 @@ html {
     scrollbar-gutter: stable;
 }
 body {
+    display: grid;
+    grid-template-columns:(1, 2fr, 1fr);
+    grid-template-rows: 10px 500px 1fr 100px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     margin: 0;
@@ -17,6 +20,72 @@ body {
 
 main {
     text-align: center;
+}
+
+.tab-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.50);
+    border-radius: 9px;
+}
+
+.indicator {
+    content: "";
+    width: 130px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.50);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 9;
+    border: 0.5px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 7px;
+    transition: all 0.3s ease-out;
+}
+
+.tab {
+    width: 130px;
+    height: 28px;
+    position: absolute;
+    z-index: 99;
+    outline: none;
+    opacity: 0;
+}
+
+.tab_label {
+    width: 130px;
+    height: 28px;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.tab--1:checked ~ .indicator {
+    left: 2px;
+}
+
+.tab--2:checked ~ .indicator {
+    left: calc(130px + 2px);
+}
+
+.tab--3:checked ~ .indicator {
+    left: calc(130px * 2 + 2px);
+}
+.tab--4:checked ~ .indicator {
+    left: calc(130px * 3 + 2px);
 }
 
 h1 {
@@ -203,7 +272,7 @@ figcaption {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     position: fixed;
-    top: 10px;
+    bottom: 10px;
     left: 10px;
 }
 .temp {
