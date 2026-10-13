@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<script src="../js/site.js" defer></script>
+<title>Katzenbilder</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="../stuff/my_cat_circle_2.png">
+<meta charset="UTF-8" name="viewport" content="initial-scale=1.0">
+<div class="Ladescreen">
+    <img src="../stuff/max-cat-spinning.gif" alt="Ladescreen">
+</div>
+</head>
+
+<body>
+
+    <header>
+    </header>
+
+    <main>
+
+    <div class="tab-container">
+
+    <input type="radio" name="tab" id="tab1" class="tab tab--1" />  
+    <label class="tab_label" for="tab1">Startseite</label>
+        
+    <input type="radio" name="tab" id="tab2" class="tab tab--2" />
+    <label class="tab_label" for="tab2">Themen</label>
+
+    <input type="radio" name="tab" id="tab3" class="tab tab--3" />
+    <label class="tab_label" for="tab3">Galerie</label>
+    
+    <input type="radio" name="tab" id="tab4" class="tab tab--4" />
+    <label class="tab_label" for="tab4">Isaac</label>
+
+    <input type="radio" name="tab" id="tab5" class="tab tab--5" checked/>
+    <label class="tab_label" for="tab5">Katzendex</label>
+
+    <div class="indicator"></div>
+    </div>
+
+    </main>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal('modal')">&times;</span>
+        <img id="modalImg" class="modal-content">
+        <div class="caption"></div>
+    </div>
+    <div class="gallery">
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_9.jpeg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_1.jpg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_2.jpg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_3.jpg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_4.jpg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_7.jpg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_8.jpg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_5.jpg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img id="img4" src="../stuff/juliens_cat_6.jpg" alt="" class="gallery-item" onclick="openModal('modal','',this.src)">
+            <figcaption></figcaption>
+        </figure>
+
+    </div>
+    <footer>
+        <div class="wetter-box">
+            Dresden
+            <div class="temp" id="dresden-temp">-- °C</div>
+            <div class="status" id="dresden-status">Lade...</div>
+        </div>
+        <div class="besucher-counter">
+            <a href='https://www.free-counters.org/'>Counter</a> 
+            <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=1b66978cee8e185e81bc9337381985f8b24d0e5d'></script>
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1569794/t/5"></script>
+        </div>
+    </footer>
+</body>

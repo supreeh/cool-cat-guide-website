@@ -55,6 +55,11 @@ document.getElementById("tab4").addEventListener("change", function() {
     window.location.href = "isaac.html";
     },300);
 });
+document.getElementById("tab5").addEventListener("change", function() {
+    setTimeout(() => {
+    window.location.href = "katzendex.html";
+    },300);
+});
 
 
 function openModal(modalId, caption, imgSrc, event) {
@@ -67,3 +72,22 @@ function openModal(modalId, caption, imgSrc, event) {
 function closeModal(modalId) {
   document.getElementById(modalId).classList.remove("show");
 }
+
+const buttons = document.querySelectorAll("[data-carousel-button]")
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
+
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
+
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
